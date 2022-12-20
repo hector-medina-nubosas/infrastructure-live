@@ -19,10 +19,10 @@ dependency "ssh-keys" {
 }
 
 inputs = {
-    image = "ubuntu-22-10-x64"
+    image = "debian-11-x64"
     name = "server-leader-client"
     region = "ams3"
-    size = "s-1vcpu-1gb"
+    size = "s-1vcpu-2gb"
     vpc_id = dependency.vpc.outputs.id
     project_id = dependency.project.outputs.id
     ssh_keys_fingerprint = [ dependency.ssh-keys.outputs.fingerprint ]
